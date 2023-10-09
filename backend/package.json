@@ -1,0 +1,20 @@
+{
+  "name": "aws-rspack-backend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "rspack serve",
+    "build": "rspack build"
+  },
+  "devDependencies": {
+    "@rspack/cli": "latest",
+    "@types/aws-lambda": "^8.10.124",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1472.0",
+    "serverless": "^3.35.2",
+    "serverless-offline": "^13.2.0",
+    "serverless-rspack": "^0.1.2",
+    "typescript": "^5.2.2",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

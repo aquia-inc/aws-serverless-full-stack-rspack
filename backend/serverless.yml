@@ -1,0 +1,30 @@
+service: aws-rspack-serverless-ts-starter
+
+configValidationMode: error
+
+frameworkVersion: "3"
+
+package:
+  individually: true
+
+plugins:
+  - serverless-rspack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi: '*'
+
+custom:
+  rspack:
+    packager: 'pnpm'
+    packagersOptions: {}
+    includeModules:
+      forceExclude:
+        - aws-sdk
